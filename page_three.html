@@ -42,6 +42,9 @@
             <div class="col">
                 <div class="p-2"
                     style="font-size: 5vw; font-weight: 500; background-color: white; box-shadow: -4px 4px #BEBEBE; border-radius: 10px;">
+                    <div class="d-flex justify-content-center py-2">
+                        <span style="font-size: 6vw; font-weight: 500;">待產常見醫療處置</span>
+                    </div>
                     <span><input class="form-check-input mx-2" type="checkbox" id="checkbox_1"
                             style="border: solid 2px #D0D0D0; box-shadow: none;">下床走動</span><br>
                     <span><input class="form-check-input mx-2" type="checkbox" id="checkbox_2"
@@ -67,10 +70,8 @@
                     <span><input class="form-check-input mx-2" type="checkbox" id="checkbox_12"
                             style="border: solid 2px #D0D0D0; box-shadow: none;">人工破水</span><br>
                     <span><input class="form-check-input mx-2" type="checkbox" id="checkbox_13"
-                            style="border: solid 2px #D0D0D0; box-shadow: none;">完全尊重醫療決策建議</span><br>
-                    <span><input class="form-check-input mx-2" type="checkbox" id="checkbox_14"
                             style="border: solid 2px #D0D0D0; box-shadow: none;">會陰切開</span><br>
-                    <span><input class="form-check-input mx-2" type="checkbox" id="checkbox_15"
+                    <span><input class="form-check-input mx-2" type="checkbox" id="checkbox_14"
                             style="border: solid 2px #D0D0D0; box-shadow: none;">親子肌膚接觸</span><br>
                 </div>
             </div>
@@ -84,7 +85,7 @@
         </div>
     </div>
     <script>
-        for (var i = 1; i < 16; i++) {
+        for (var i = 1; i < 15; i++) {
             checkbox_name = "checkbox_" + i
             if (localStorage.getItem(checkbox_name) == "true") {
                 $("#" + checkbox_name).prop('checked', true)
@@ -94,7 +95,7 @@
     </script>
     <script>
         function checkbox() {
-            for (var i = 1; i < 16; i++) {
+            for (var i = 1; i < 15; i++) {
                 checkbox_name = "checkbox_" + i
                 if ($("#" + checkbox_name).is(':checked')) {
                     localStorage.setItem(checkbox_name, "true");
